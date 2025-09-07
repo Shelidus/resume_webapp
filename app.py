@@ -47,7 +47,7 @@ def index():
             resume_file = download_resume_from_url(resume_url)
             raw_text = html_text(resume_file)
 
-            groq_client = Groq(api_key="YOUR_KEY_HERE")
+            groq_client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
             system_message = (
                 "You are a professional resume writer with 10 years of experience. "
