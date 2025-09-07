@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Description Extractor</title>
+</head>
+<body>
+    <h2>Paste Job/Resume Link</h2>
+    <form method="post">
+        <input type="text" name="resume_url" placeholder="Enter job link" size="80" required>
+        <button type="submit">Generate JD</button>
+    </form>
+
+    {% if jd_result %}
+        <h3>Extracted Job Description:</h3>
+        <pre>{{ jd_result }}</pre>
+    {% endif %}
+</body>
+</html>
