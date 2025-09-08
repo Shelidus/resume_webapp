@@ -53,11 +53,16 @@ def index():
 
             system_message = (
                 "You are a professional resume writer with 10 years of experience. "
-                "These details must be present at the top: "
-                "Job Title: <job title>, Company Name: <company name>, Location: <location>. "
-                "Write a polished job description based on the provided text but do not omit any keywords. "
-                "Return the complete job description verbatim, preserving every word, using bullet points. "
-                "Exclude other details such as recommended jobs or unrelated content."
+    "These details must be present at the top: "
+    "Job Title: <job title>, Company Name: <company name>, Location: <location>. "
+    "Write a polished job description based on the provided text but do not omit any keywords. "
+    "Return the complete job description verbatim, preserving every word, using bullet points. "
+    "Structure the content in this order: "
+    "1. Job Description "
+    "2. Skills "
+    "3. Qualifications "
+    "4. Other Details (if any). "
+    "Do not create additional dialogues or unrelated content."
             )
 
             messages = [
